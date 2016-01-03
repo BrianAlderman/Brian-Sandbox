@@ -1,4 +1,11 @@
+import pip
+installed_packages = pip.get_installed_distributions()
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
+     for i in installed_packages])
+print(installed_packages_list)
 
+
+'''
 import lmdb, cv2, re, sys
 import os, fnmatch, shutil, subprocess
 from IPython.utils import io
@@ -17,5 +24,4 @@ if caffe_path not in sys.path:
 import caffe
 
 print("\nSuccessfully imported packages, hooray!\n")
-
-
+'''
