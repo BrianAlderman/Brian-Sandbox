@@ -1,11 +1,11 @@
 #!/bin/bash
-git commit --dry-run 
+git commit --dry-run -a 
 echo -n "List of files correct? [Y/N]"
 read fileCorrect
-if [$fileCorrect != Y]
+if [$fileCorrect != "Y"]
   then 
     echo "Commit process exited"
-    exit
+    exit 1
 fi
 
 echo -n "Enter your commit message (no quotes) and press [ENTER]: "
